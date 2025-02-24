@@ -1,27 +1,74 @@
-@use './variables' as *;
-@use './typography' as *;
+@use "./variables" as *;
+@use "./typography" as *;
 
 //media queries
 @mixin mobile {
-    @media (min-width: $mobile-breakpoint) {
-        @content;
-    }
+  @media (min-width: $mobile-breakpoint) and (max-width: calc($tablet-breakpoint - 0.01rem)) {
+    @content;
+  }
 }
+
 @mixin tablet {
-    @media (min-width: $tablet-breakpoint) {
-        @content;
-    }
+  @media (min-width: $tablet-breakpoint) and (max-width: calc($desktop-breakpoint - 0.01rem)) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width: $desktop-breakpoint) {
-        @content;
-    }
+  @media (min-width: $desktop-breakpoint) and (max-width: calc($desktop-large-breakpoint - 0.01rem)) {
+    @content;
+  }
 }
 
 @mixin desktop-large {
-    @media (min-width: $desktop-large-breakpoint) {
-        @content;
-    }
+  @media (min-width: $desktop-large-breakpoint) {
+    @content;
+  }
 }
 
+// button mixin
+@mixin button(
+  $bg-color,
+  $text-color,
+  $hover-bg-color,
+  $padding: $button-padding,
+  $border-radius: $button-border-radius
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  border: none;
+  border-radius: $border-radius;
+  font-size: $button-font-size;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: $button-transition;
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// icon mixin
+@mixin icon-arrow-right(
+  $size: $button-icon-size,
+  $bg-color: $color-secondary,
+  $icon-color: $color-primary
+) {
+  background-color: $bg-color;
+  color: $icon-color;
+  border-radius: 50%;
+  padding: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: $size;
+  font-size: $size;
+}
