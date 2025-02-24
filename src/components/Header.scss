@@ -1,0 +1,63 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/globals" as *;
+
+.header {
+  position: relative;
+  padding: 22rem 0 0 2.1875rem;
+  color: $color-secondary;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 21.75rem;
+    left: 1.2rem;
+    width: 49%;
+    height: 45%;
+    background-color: rgba(76, 175, 80, 0.2);
+    z-index: -1;
+    border-radius: 0.625rem;
+
+    @include mobile {
+      height: 42%;
+      width: 88%;
+    }
+
+    @include tablet {
+      width: 60%;
+    }
+  }
+
+  .header__title {
+    display: flex;
+    flex-direction: column;
+    @include mobile {
+      align-items: left;
+    }
+    @include tablet {
+      max-width: 22rem;
+      text-align: left;
+      line-height: 1.2;
+    }
+    @include desktop {
+      display: block;
+      text-align: left;
+      max-width: 40rem;
+      line-height: 1;
+    }
+  }
+
+  .header__button {
+    @include button(
+      $button-secondary-bg,
+      $button-secondary-text,
+      $button-secondary-hover
+    );
+    margin-top: 0.8rem;
+
+    .bi-arrow-up-right-circle-fill {
+      @include icon-arrow-right($size: 2.2rem);
+    }
+  }
+}
