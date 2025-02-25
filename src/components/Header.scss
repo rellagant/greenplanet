@@ -1,39 +1,57 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/globals" as *;
-
+// * { border: 2px solid red; }
 .header {
+  border: 2px solid red;
   position: relative;
   padding: 22rem 0 0 2.1875rem;
-  color: $color-secondary;
   text-align: left;
+  background-image: url("../assets/images/windmill-green.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 65vh;
+  width: 100%;
+  position: relative;
+  z-index: 0;
 
   &::before {
     content: "";
     position: absolute;
     top: 21.75rem;
     left: 1.2rem;
-    width: 49%;
-    height: 45%;
+    width: 45%;
+    height: 28%;
     background-color: rgba(76, 175, 80, 0.2);
     z-index: -1;
     border-radius: 0.625rem;
 
     @include mobile {
-      height: 42%;
+      height: 28%;
       width: 88%;
     }
 
     @include tablet {
       width: 60%;
+      height: 28%;
+    }
+  }
+  .header__headline,
+  .header__description {
+    color: $color-secondary;
+    @include mobile {
+      max-width: 18rem;
     }
   }
 
   .header__title {
     display: flex;
     flex-direction: column;
+    color: $color-secondary;
     @include mobile {
       align-items: left;
+      max-width: 15rem;
     }
     @include tablet {
       max-width: 22rem;
@@ -43,7 +61,7 @@
     @include desktop {
       display: block;
       text-align: left;
-      max-width: 40rem;
+      max-width: 37rem;
       line-height: 1;
     }
   }
@@ -58,6 +76,51 @@
 
     .bi-arrow-up-right-circle-fill {
       @include icon-arrow-right($size: 2.2rem);
+    }
+  }
+
+  .stats-panel {
+    position: absolute;
+    bottom: 0px;
+    right: 55%;
+    background: $color-secondary;
+    border-radius: 0 1.25rem 0 0;
+    padding: 2.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 2rem;
+    @include mobile {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      gap: 1rem;
+    }
+
+    .stats-panel__number {
+      font-size: 2.75rem;
+      font-weight: 500;
+      color: $color-primary;
+      line-height: 1.2;
+      margin: 0;
+      @include mobile {
+        font-size: 2rem;
+      }
+      @include tablet {
+        font-size: 1.9rem;
+      }
+    }
+    .stats-panel__description {
+      font-size: 0.875rem;
+      color: $color-tertiary;
+      line-height: 1.2;
+      margin: 0;
+      @include mobile {
+        font-size: 1rem;
+      }
+      @include tablet {
+        font-size: 0.9rem;
+      }
     }
   }
 }

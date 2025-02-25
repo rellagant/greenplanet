@@ -15,6 +15,23 @@ export default function Header() {
         <button className="header__button">
           Get Started <i className="bi bi-arrow-up-right-circle-fill"></i>
         </button>
+
+        <div className="header__stats-panel stats-panel">
+          <div className="stats-panel__item">
+            <h2 className="stats-panel__number">$6m</h2>
+            <p className="stats-panel__description">The company&apos;s annual net income</p>
+          </div>
+          <div className="stats-panel__item">
+            <h2 className="stats-panel__number">315</h2>
+            <p className="stats-panel__description">Projects completed worldwide</p>
+          </div>
+          <div className="stats-panel__item">
+            <h2 className="stats-panel__number">120k</h2>
+            <p className="stats-panel__description">
+              Employees working worldwide
+            </p>
+          </div>
+        </div>
       </header>
     </>
   );
