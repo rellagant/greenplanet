@@ -1,9 +1,8 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/globals" as *;
-// * { border: 2px solid red; }
+
 .header {
-  border: 2px solid red;
   position: relative;
   padding: 22rem 0 0 2.1875rem;
   text-align: left;
@@ -82,7 +81,7 @@
   .stats-panel {
     position: absolute;
     bottom: 0px;
-    right: 55%;
+    left: 0rem;
     background: $color-secondary;
     border-radius: 0 1.25rem 0 0;
     padding: 2.5rem;
