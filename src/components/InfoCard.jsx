@@ -1,6 +1,6 @@
 import "./InfoCard.scss";
 import map from "../assets/images/map.png";
-import turbine from "../assets/images/helicalturbine.png";
+import turbine from "../assets/images/turbine.png";
 
 export default function InfoCard() {
   return (
@@ -45,16 +45,16 @@ export default function InfoCard() {
     <div className="info-card__bottom-container">
       {/* Left Section */}
       <div className="info-card__bottom-left">
-        <h5 className="info-card__bottom-title">
+        <h2 className="info-card__bottom-title">
           Powering Your Future with Clean Energy
-        </h5>
+        </h2>
         <p className="info-card__bottom-description">
           Join hundreds of companies embracing global solar initiatives
         </p>
         <button className="info-card__bottom-button">
           Learn More <i className="bi bi-arrow-up-right-circle-fill"></i>
         </button>
-        <h3 className="info-card__bottom-title">
+        <h3 className="info-card__bottom-fact">
           Environmentally Friendly
         </h3>
         <p className="info-card__bottom-description">
@@ -70,13 +70,23 @@ export default function InfoCard() {
 
       {/* Right Section */}
       <div className="info-card__bottom-right">
-        <p className="info-card__bottom-subtitle">Certifications</p>
-        <h4 className="info-card__bottom-factoid"></h4>
-        <p className="info-card__bottom-subtitle">Inverter Power</p>
-        <h4 className="info-card__bottom-factoid"></h4>
-        <p className="info-card__bottom-subtitle">Dimensions</p>
-        <h4 className="info-card__bottom-factoid"></h4>
-          </div>
+  <div className="info-card__bottom-section">
+    <p className="info-card__bottom-subtitle">Certifications: </p>
+    <h4 className="info-card__bottom-factoid">IEC/UL 61730 CEC <br></br> Listed</h4>
+  </div>
+  <div className="info-card__bottom-section-middle">
+    <p className="info-card__bottom-subtitle">Inverter Power:</p>
+    <h4 className="info-card__bottom-factoid">3.8KW/7.6KW</h4>
+  </div>
+  <div className="info-card__bottom-section-middle">
+    <p className="info-card__bottom-subtitle">Dimensions: </p>
+    <h4 className="info-card__bottom-factoid">74.4&quot; x 41.2&quot; x 1.57&quot; (including frame)</h4>
+  </div>
+  <div className="info-card__bottom-section">
+    <p className="info-card__bottom-subtitle">Dimensions: </p>
+    <h4 className="info-card__bottom-factoid">74.4&quot; x 41.2&quot; x 1.57&quot; (including frame)</h4>
+  </div>
+</div>
         </div>
       </div>
     </div>
