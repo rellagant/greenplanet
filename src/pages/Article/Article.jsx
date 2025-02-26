@@ -15,7 +15,7 @@ export default function Article() {
         const response = await axios.get(
           `http://localhost:1337/api/articles/${documentId}`
         );
-        console.log("Response:",response.data);
+        console.log("API Response:", response.data);
         setArticle(response.data.data);
       } catch (error) {
         console.error("Error fetching article:", error);
@@ -26,12 +26,16 @@ export default function Article() {
     };
 
     if (documentId) {
-        fetchArticle();
-      }
+      fetchArticle();
+    }
   }, [documentId]);
 
+  if (!documentId) {
+    return <div>Loading document ID...</div>;
+  }
+
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading article...</div>;
   }
 
   if (error) {
@@ -39,19 +43,20 @@ export default function Article() {
   }
 
   if (!article) {
-    return <div>Loading...</div>;
+    return <div>No article found.</div>;
   }
 
   return (
     <div className="article-page">
-      <h1>{article?.title}</h1>
+      <h1>{article.title}</h1>
       {article.content.map((block, index) => (
-          <div key={index}>
-            {block.children.map((child, childIndex) => (
-              <p key={childIndex}>{child.text}</p>
-            ))}
-          </div>
-        ))}
+        <div key={`block-${index}`}>
+          {block.children.map((child, childIndex) => (
+            <p key={`child-${index}-${childIndex}`}>{child.text}</p>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }
+
