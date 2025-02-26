@@ -1,0 +1,70 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/globals" as *;
+
+.article-title {
+    font-size: 2.2rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 1rem; 
+  width: 100%;
+  padding: 2rem;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  width: 30%; 
+  aspect-ratio: 1 / 1; 
+  border: 1px solid #ddd;
+  padding: 1rem;
+  box-sizing: border-box; 
+  text-align: center;
+  background-color: #fff;
+}
+
+.article-card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.article-card__author {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article-card__photo {
+  width: 100%;
+  max-height: 12rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.article-card__photo--placeholder {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.article-card__btn {
+    background-color: $color-secondary;
+    color: grey;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $mercury;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: $mercury;
+    }
+}
