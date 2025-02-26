@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-md-6 footer__left">
             {/* Logo and Brand */}
             <div className="footer__brand">
-              <a href="#" className="footer__brand-link">
+              <a href="/" className="footer__brand-link">
                 <i className="bi bi-fan footer__brand-icon"></i>
                 <span className="footer__brand-text">Solix</span>
               </a>
@@ -78,7 +78,6 @@ export default function Footer() {
           <div className="col-md-6 footer__right">
             {/* newsletter */}
             <div className="footer__newsletter">
-              <h5 className="footer__newsletter-title">Stay Updated</h5>
               <div className="footer__newsletter-form">
                 <input
                   type="email"
@@ -165,42 +164,19 @@ export default function Footer() {
             {/* Social Media Icons */}
             <div className="footer__social">
               <a href="#" className="footer__social-link" aria-label="Facebook">
-                <img
-                  src="facebook-icon.png"
-                  alt="Facebook"
-                  className="footer__social-icon"
-                />
+                <i className="bi bi-facebook footer__social-icon"></i> {/* Facebook */}
               </a>
-              <a href="#" className="footer__social-link" aria-label="Twitter">
-                <img
-                  src="twitter-icon.png"
-                  alt="Twitter"
-                  className="footer__social-icon"
-                />
+              <a href="#" className="footer__social-link" aria-label="Instagram">
+                <i className="bi bi-instagram footer__social-icon"></i> {/* Instagram */}
               </a>
-              <a
-                href="#"
-                className="footer__social-link"
-                aria-label="Instagram">
-                <img
-                  src="instagram-icon.png"
-                  alt="Instagram"
-                  className="footer__social-icon"
-                />
-              </a>
-              <a href="#" className="footer__social-link" aria-label="LinkedIn">
-                <img
-                  src="linkedin-icon.png"
-                  alt="LinkedIn"
-                  className="footer__social-icon"
-                />
+              <a href="#" className="footer__social-link" aria-label="Whatsapp">
+                <i className="bi bi-whatsapp footer__social-icon"></i> {/* Whatsapp */}
               </a>
               <a href="#" className="footer__social-link" aria-label="YouTube">
-                <img
-                  src="youtube-icon.png"
-                  alt="YouTube"
-                  className="footer__social-icon"
-                />
+                <i className="bi bi-youtube footer__social-icon"></i> {/* YouTube */}
+              </a>
+              <a href="#" className="footer__social-link" aria-label="Threads">
+                <i className="bi bi-threads footer__social-icon"></i> {/* Threads */}
               </a>
             </div>
           </div>
