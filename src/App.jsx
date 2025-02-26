@@ -1,19 +1,22 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.scss'
-import Header from './components/Header/Header'
-import InfoCard from './components/InfoCard/InfoCard'
-import NavBar from './components/NavBar/NavBar'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home/Home";
+import NavBar from "./components/NavBar/NavBar";
+// import Article from "./pages/Article/Article";
 
 function App() {
 
   return (
     <>
     <div className="app-container">
-      <NavBar />
-      <Header />
-      <InfoCard />
-  
-      {/* <h1>Hello World</h1> */}
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/article/:id" element={<Article />} /> */}
+        </Routes>
+      </Router>
     </div>
     </>
   )
