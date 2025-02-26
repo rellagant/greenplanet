@@ -162,7 +162,7 @@ export default function Footer() {
             </div>
 
             {/* Social Media Icons */}
-            <div className="footer__social">
+              <div className="footer__social">
               <a href="#" className="footer__social-link" aria-label="Facebook">
                 <i className="bi bi-facebook footer__social-icon"></i> {/* Facebook */}
               </a>
