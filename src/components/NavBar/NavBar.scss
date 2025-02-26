@@ -1,0 +1,63 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/globals" as *;
+
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 1.2rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $color-secondary;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 2rem;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  color: $color-secondary;
+
+  &:hover {
+    color: #007bff;
+  }
+}
+
+.contact-us-link {
+  @include button(
+    $button-tertiary-bg,
+    $button-primary-text,
+    $button-tertiary-hover
+  );
+  border-radius: 3.125rem;
+  border: 1px solid $button-primary-text;
+  font-size: 1rem;
+}
+.navbar-nav:last-child {
+  padding-right: 2rem;
+}
+
+.bi-arrow-up-right-circle-fill {
+  @include icon-arrow-right($size: 2rem, $bg-color: black, $icon-color: white);
+}
