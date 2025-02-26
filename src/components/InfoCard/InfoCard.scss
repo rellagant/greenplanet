@@ -2,8 +2,6 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/globals" as *;
 
-// * {border: 1px solid red;}
-
 .info-card {
   display: flex;
   flex-direction: column;
