@@ -1,12 +1,12 @@
-@use "../styles/partials/variables" as *;
-@use "../styles/partials/mixins" as *;
-@use "../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/globals" as *;
 
 .header {
   position: relative;
   padding: 22rem 0 0 2.1875rem;
   text-align: left;
-  background-image: url("../assets/images/windmill-green.jpg");
+  background-image: url("../../assets/images/windmill-green.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -85,7 +85,7 @@
     background: $color-secondary;
     border-radius: 0 1.25rem 0 0;
     padding: 2.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     gap: 2rem;
     @include mobile {

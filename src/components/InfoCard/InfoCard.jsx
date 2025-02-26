@@ -1,6 +1,6 @@
 import "./InfoCard.scss";
-import map from "../assets/images/map.png";
-import turbine from "../assets/images/turbine.png";
+import map from "../../assets/images/map.png";
+import turbine from "../../assets/images/turbine.png";
 
 export default function InfoCard() {
   return (
