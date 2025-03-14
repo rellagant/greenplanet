@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           {" "}
           <i className="bi bi-fan"></i>
           Solix
@@ -37,8 +37,8 @@ const NavBar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Maintenance
+              <a className="nav-link" href="">
+                Articles
               </a>
             </li>
             <li className="nav-item">
